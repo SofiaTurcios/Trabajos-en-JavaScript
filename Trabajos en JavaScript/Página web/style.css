@@ -1,0 +1,342 @@
+/* || General setup */
+/*elimina el margen y relleno de la página*/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/*tamaño de fuente y color de fondo del documento*/
+html {
+    font-size: 10px;
+    background-color: #232425;
+}
+
+/*indica el ancho y color de fondo del cuerpo y lo centra*/
+body {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #232425;
+}
+
+/*define la tipografía y color de títulos y subtítulos*/
+h1, h2, h3 {
+    font-family: 'Oswald', cursive;
+    color: #000000;
+}
+
+/*define fuentes de párrafos e inputs*/
+p, input {
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+
+/*tipografía y color de los elementos de la lista*/
+li {
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+}
+
+/*estilo para h1: tamaño de fuente, alineación, color, sombra*/
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: #fafafa;
+    text-shadow: 2px 2px 10px rgb(70, 70, 70);
+    animation: fadeIn 2s ease-in-out; /*aplica animación para que aumente su intensidad durante 2 segundos*/
+}
+
+/*estilo para h2: tamaño de fuente, alineación*/
+h2 {
+    font-size: 3rem;
+    margin-bottom: -8px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /*aplica animación para que aumente su intensidad durante 2 segundos*/
+}
+
+/*estilo para h3: tamaño de fuente, posición*/
+h3 {
+    font-size: 2.2rem;
+    margin-bottom: -5px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /*aplica animación para que aumente su intensidad durante 2 segundos*/
+    position: relative;
+}
+
+/*efecto máquina de escribir*/
+.contenedor {
+	/*centra un elemento horizontalmente dentro de un contenedor y mejoran su distribución*/
+    margin: auto; 
+	display: table;
+}
+
+h3 span {
+    /*define posición, fondo y borde del efecto de los subtítulos*/
+    position:absolute;
+    right:0;
+    width:0;
+    background: #f0ebe6;
+    border-left: 1px solid #000;
+    animation: escribir 4s steps(40); /*aplica animación de efecto máquina de escribir durante 4 segundos*/
+}
+
+
+/*Determina el tamaño de letra, dimensión del texto y la animación fade-in a los párrafos y listas*/
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    animation: fadeIn 2s ease-in-out;
+}
+
+li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/*Encabezado*/
+/*Imagen de fondo del enzabezado, tamaño, posición, margenes*/
+header{
+    background-image: url('https://www.16toneladas.com/wp-content/uploads/2014/08/27-club-portraits.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    margin-bottom: 10px;
+}
+
+/*color y relleno del nav, article, aside y footer*/
+nav, article, aside, footer {
+    background-color: #f0ebe6;
+    padding: 1%;
+}
+
+/*estilos de la barra de navegación: tamaño, fondo, alineación*/
+nav {
+    height: 50px;
+    background-color: #726f6f;
+    display: flex;
+    align-items: center;
+    animation: slideIn 1s ease-in-out; /*aplica animación para deslizarse durante un segundo*/
+}
+
+/*estilos de la lista de navegación: relleno, tipo y disposición de elementos*/
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+/*estilo de elementos dentro de la barra de navegación*/
+nav li {
+    display: inline; /*disposición horizontal*/
+    text-align: center;
+    flex: 1;
+}
+
+/*estilos de enlaces de la barra de navegación: el botón de búsqueda cambia de color*/
+nav a {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease-in-out; /*aplica animación para que el texto cambie de color*/
+}
+
+/*estilo de cambio de color de los enlaces*/
+nav a:hover {
+    color: #f0ebe6;
+}
+
+/*estilo del formulario de navegación: disposición, centrado, relleno*/
+nav form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.2rem;
+}
+
+/*estilo de texto dentro del formulario: tamaño de texto y altura de contenido*/
+input {
+    font-size: 1.6rem;
+    height: 32px;
+}
+
+/*proporción del input tipo search*/
+input[type="search"] {
+    flex: 2;
+}
+
+/*estilo del input: proporción, margen, fondo, borde, cursor y transición*/
+input[type="submit"] {
+    flex: 1;
+    margin-left: 1rem;
+    background: #000000;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+/*cabio de color del botón*/
+input[type="submit"]:hover {
+    background: rgb(83, 83, 83);
+}
+
+
+/*main layout*/
+/*disposición y animación del fondo principal*/
+main {
+    display: flex;
+    animation: fadeIn 2s ease-in-out;
+}
+
+article {
+    flex: 4;
+}
+
+/*Diseño de la sección lateral: proporción, margen, fondo, color y relleno*/
+aside {
+    flex: 1;
+    margin-left: 10px;
+    background-color: #726f6f;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+/*determina el estilo y alineación de la lista*/
+aside ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+aside li a {
+    color: #1a1a1a; /*color del texto de los enlaces*/
+    margin-bottom: 30px; /*aumenta el espaciado entre los enlaces*/
+    display: block; /*asegura que el margen se aplique correctamente*/
+    text-align: center; /*centra el texto*/
+}
+
+aside li a:hover {
+    color: #EDE3DB; /*color del texto de los enlaces al pasar el mouse por encima*/
+    animation: zoomIn 1 forwards; /*aplica la animación zoom una duración de 0.3 segundos*/
+}
+
+/* Estilos para el contenedor de los formularios */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #232425;
+    gap: 10px; /*Espacio entre los formularios*/
+    padding: 1px; /*Espacio interno del contenedor*/
+    margin-top: 0%;
+}
+
+/*estilo del formulario para comentarios*/
+div {
+    flex: 1;
+    background-color: #f0ebe6;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border: 1px solid #232425;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+textarea {
+    margin-left: 10px;
+    width: 75%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Lato';
+    border: 1px solid #232425;
+}
+
+label {
+    margin-bottom: 0.5px;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-family: 'Arial';
+    display: block;
+    font-weight: bold;
+}
+
+/*Estilo para el formulario de la encuesta*/
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+.question {
+    margin-bottom: 5px;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*estilo de pie de página: margen, alineación, fondo, color y relleno*/
+footer {
+    margin-top: 10px;
+    text-align: center;
+    background: #726f6f;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/*Animaciones*/
+/*animación 1: hace que la página aumente gradualmente su intensidad*/ 
+/*@keyframes permite a los autores controlar los pasos intermedios en una secuencia de animación*/
+@keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+}
+
+/*animación 2: hace que un texto se deslice de arriba a abajo*/  
+@keyframes slideIn {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/*animación 3: las imágenes aumenten de tamaño al pasar el mouse sobre ellas*/
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/*animación 4: Muestra el efecto máquina de escribir*/
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+
+/*animación 5: zoom*/
+@keyframes zoomIn {
+    from {
+        transform: scale(1); /*tamaño normal*/
+    }
+    to {
+        transform: scale(1.1); /*tamaño aumentado*/
+    }
+}

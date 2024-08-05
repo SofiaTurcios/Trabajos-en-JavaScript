@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de usuarios</title>
+    <link rel="stylesheet" href="estilo formulario.css"> <!--enlace del css-->
+</head>
+
+<body>
+    <h1>Acceso de usuarios</h1>
+    <br>
+    <form>
+        <h3>Usuario</h3>
+        <input type="text" id="usuarios" onclick="">
+        <h3>Contraseña</h3>
+        <input type="password" id="clave">
+        <br> <br>
+        <input type="button" value="Confirmar" onclick="verificar()">
+    </form>
+    <script>
+        let control = 0;
+        let Contraseña = '1234';
+
+        function verificar(){
+            let clave = document.getElementById('clave').value;
+            if (clave !=Contraseña){
+                alert('La contraseña es incorrecta');
+            } else{
+                window.open("http://127.0.0.1:5500/P%C3%A1gina%20web/P%C3%A1gina%20web.html");
+            }
+        }
+    </script>
+
+</body>
+</html>
